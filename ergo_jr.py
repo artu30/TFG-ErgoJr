@@ -1,5 +1,8 @@
+import logging, sys
 from pypot.creatures import PoppyErgoJr
 import time
+
+logging.basicConfig(stream=sys.stderr, level="DEBUG")
 
 poppy = PoppyErgoJr(camera='dummy')
 
