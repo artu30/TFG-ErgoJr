@@ -1,4 +1,3 @@
-import numpy as np
 from pypot.creatures import PoppyErgoJr
 
 poppy = PoppyErgoJr(camera='dummy')
