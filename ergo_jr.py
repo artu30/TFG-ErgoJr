@@ -1,10 +1,10 @@
-try:
-    from pypot.creatures import PoppyErgoJr
-    poppy = PoppyErgoJr(camera='dummy')
-except Exception,e:
-    print "could not create poppy object"
-    print e
+from pypot.creatures import PoppyErgoJr
 
-for m in poppy.motors:
-    m.compliant = False
-    m.goal_position = 0.0
+poppy = PoppyErgoJr(camera='dummy')
+
+poppy.m1.goal_position = 0
+poppy.m2.goal_position = -15
+poppy.m3.goal_position = 40
+poppy.m4.goal_position = 0
+poppy.m5.goal_position = -35
+poppy.m6.goal_position = -60
