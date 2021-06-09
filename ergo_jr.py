@@ -86,7 +86,7 @@ while 1:
         InitializeErgoJr(poppy)
 
         executeExample(poppy)
-        operaciones[ch](poppy)
+        operaciones[ch]()
         time.sleep(4)
 
         BackToRestPosture(poppy)
