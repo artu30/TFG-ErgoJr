@@ -20,9 +20,9 @@ def InitializeErgoJr(poppy):
     poppy.m2.compliant = False
     poppy.m3.compliant = False
 
-    poppy.m1.moving_speed = 200
-    poppy.m2.moving_speed = 200
-    poppy.m3.moving_speed = 200
+    poppy.m1.moving_speed = 100
+    poppy.m2.moving_speed = 100
+    poppy.m3.moving_speed = 100
 
 def BackToRestPosture(poppy):
     poppy.m1.goal_position = 0
