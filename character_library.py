@@ -5,79 +5,79 @@ class CharacterLibrary:
         self.poppy = poppy
 
     def WriteA(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("A")
 
     def WriteB(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("B")
 
     def WriteC(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("C")
 
     def WriteD(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("D")
 
     def WriteE(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("E")
 
     def WriteF(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("F")
 
     def WriteG(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("G")
 
     def WriteH(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("H")
 
     def WriteI(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("I")
 
     def WriteJ(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("J")
 
     def WriteK(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("K")
 
     def WriteL(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("L")
 
     def WriteM(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("M")
 
     def WriteN(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("N")
 
     def WriteO(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("O")
 
     def WriteP(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("P")
 
     def WriteQ(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("Q")
 
     def WriteR(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("R")
 
     def WriteS(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("S")
 
     def WriteT(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("T")
 
     def WriteU(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("U")
 
     def WriteV(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("V")
 
     def WriteW(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("W")
 
     def WriteX(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("X")
 
     def WriteY(self):
-       print ("La suma de los 2 numeros es: ", (self.numero+self.numerito))
+       print ("Y")
 
     def WriteZ(self):
-       print ("La resta de los 2 numeros es: ", (self.numero-self.numerito))
+       print ("Z")
