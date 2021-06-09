@@ -1,5 +1,6 @@
 import time
 import argparse
+from character_library import *
 from pypot.creatures import PoppyErgoJr
 
 def getchar():
@@ -49,13 +50,45 @@ while 1:
     else:
         print('Writting . . .')
 
+        CharacterManager = CharacterLibrary(ch)
+
+        operaciones = { 
+        'a': CharacterManager.WriteA, 
+        'b': CharacterManager.WriteB, 
+        'c': CharacterManager.WriteC, 
+        'd': CharacterManager.WriteD,
+        'e': CharacterManager.WriteE, 
+        'f': CharacterManager.WriteF, 
+        'g': CharacterManager.WriteG, 
+        'h': CharacterManager.WriteH,
+        'i': CharacterManager.WriteI, 
+        'j': CharacterManager.WriteJ, 
+        'k': CharacterManager.WriteQ, 
+        'l': CharacterManager.WriteL,
+        'm': CharacterManager.WriteM, 
+        'n': CharacterManager.WriteN, 
+        'o': CharacterManager.WriteO, 
+        'p': CharacterManager.WriteP,
+        'q': CharacterManager.WriteQ, 
+        'r': CharacterManager.WriteR, 
+        's': CharacterManager.WriteS, 
+        't': CharacterManager.WriteT,
+        'u': CharacterManager.WriteU, 
+        'v': CharacterManager.WriteV, 
+        'w': CharacterManager.WriteW, 
+        'x': CharacterManager.WriteX,
+        'y': CharacterManager.WriteY, 
+        'z': CharacterManager.WriteZ
+        }
+
         poppy = PoppyErgoJr(camera='dummy')
 
         InitializeErgoJr(poppy)
 
         executeExample(poppy)
+        operaciones[ch](poppy)
         time.sleep(4)
-        
+
         BackToRestPosture(poppy)
         time.sleep(4)
         break
