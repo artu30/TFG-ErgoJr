@@ -24,14 +24,6 @@ def InitializeErgoJr(poppy):
     poppy.m2.moving_speed = 200
     poppy.m3.moving_speed = 200
 
-def executeExample(poppy):
-    poppy.m1.goal_position = 10
-    poppy.m2.goal_position = 10
-    poppy.m3.goal_position = 10
-    poppy.m4.goal_position = 10
-    poppy.m5.goal_position = 10
-    poppy.m6.goal_position = 10
-
 def BackToRestPosture(poppy):
     poppy.m1.goal_position = 0
     poppy.m2.goal_position = 0
@@ -85,7 +77,6 @@ while 1:
 
         InitializeErgoJr(poppy)
 
-        executeExample(poppy)
         operaciones[ch]()
         time.sleep(4)
 

@@ -5,7 +5,12 @@ class CharacterLibrary:
         self.poppy = poppy
 
     def WriteA(self):
-       print ("A")
+        poppy.m1.goal_position = 10
+        poppy.m2.goal_position = 10
+        poppy.m3.goal_position = 10
+        poppy.m4.goal_position = 10
+        poppy.m5.goal_position = 10
+        poppy.m6.goal_position = 10
 
     def WriteB(self):
        print ("B")
