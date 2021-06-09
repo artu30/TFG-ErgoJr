@@ -1,5 +1,28 @@
 import time
+import argparse
 from pypot.creatures import PoppyErgoJr
+
+def getchar():
+   #Returns a single character from standard input
+   import tty, termios, sys
+   fd = sys.stdin.fileno()
+   old_settings = termios.tcgetattr(fd)
+   try:
+      tty.setraw(sys.stdin.fileno())
+      ch = sys.stdin.read(1)
+   finally:
+      termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+   return ch
+
+print("Write a character")
+
+while 1:
+    ch = getchar()
+    if ch.strip() == '':
+        print('bye!')
+        break
+
+print(ch)
 
 poppy = PoppyErgoJr(camera='dummy')
 
