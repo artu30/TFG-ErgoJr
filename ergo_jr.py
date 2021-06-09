@@ -25,9 +25,9 @@ def executeExample():
     poppy.m2.moving_speed = 250
     poppy.m3.moving_speed = 250
 
-    poppy.m1.goal_position = 0
-    poppy.m2.goal_position = 0
-    poppy.m3.goal_position = 0
+    poppy.m1.goal_position = 10
+    poppy.m2.goal_position = 10
+    poppy.m3.goal_position = 10
 
 
 print("Write a character")
@@ -38,7 +38,6 @@ while 1:
         print('bye!')
         break
     else:
-        print 'You pressed', ch
         executeExample()
         time.sleep(6)
         break
