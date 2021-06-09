@@ -50,6 +50,10 @@ while 1:
     else:
         print('Writting . . .')
 
+        poppy = PoppyErgoJr(camera='dummy')
+
+        CharacterManager = CharacterLibrary(poppy)
+
         operaciones = { 
         'a': CharacterManager.WriteA, 
         'b': CharacterManager.WriteB, 
@@ -78,10 +82,6 @@ while 1:
         'y': CharacterManager.WriteY, 
         'z': CharacterManager.WriteZ
         }
-
-        poppy = PoppyErgoJr(camera='dummy')
-
-        CharacterManager = CharacterLibrary(poppy)
 
         InitializeErgoJr(poppy)
 
