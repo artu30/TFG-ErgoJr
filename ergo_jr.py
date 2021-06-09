@@ -1,4 +1,5 @@
 from pypot.creatures import PoppyErgoJr
+from .poppy_ergo_jr import PoppyErgoJr
 
 poppy = PoppyErgoJr(camera='dummy')
 
