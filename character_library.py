@@ -8,6 +8,8 @@ class CharacterLibrary:
     def WriteA(self):
          self.poppy.m1.goal_position = 30
          time.sleep(1)
+         self.poppy.m5.goal_position = -30
+         time.sleep(1)
          self.poppy.m3.goal_position = 30
          time.sleep(1)
          self.poppy.m1.moving_speed = 20
