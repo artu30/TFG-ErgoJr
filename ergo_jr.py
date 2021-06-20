@@ -42,7 +42,7 @@ def BackToRestPosture(poppy):
 def WriteInitPos(poppy):
     poppy.m1.goal_position = 30
     time.sleep(1)
-    poppy.m5.goal_position = -60
+    poppy.m5.goal_position = -90
     time.sleep(1)
     poppy.m3.goal_position = 90
     time.sleep(1)
