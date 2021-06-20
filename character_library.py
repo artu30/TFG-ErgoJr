@@ -6,14 +6,13 @@ class CharacterLibrary:
       self.poppy = poppy
 
    def WriteA(self):
-      WriteInitPos()
       self.poppy.m1.moving_speed = 20
       self.poppy.m1.goal_position = 0
       self.poppy.m3.moving_speed = 60
       self.poppy.m3.goal_position = 0
       self.poppy.m5.moving_speed = 60
       self.poppy.m3.goal_position = 30
-      time.sleep(4)
+      time.sleep(2)
 
    def WriteB(self):
       print ("B")
@@ -89,11 +88,3 @@ class CharacterLibrary:
 
    def WriteZ(self):
       print ("Z")
-
-   def WriteInitPos(self):
-      self.poppy.m1.goal_position = 30
-      time.sleep(1)
-      self.poppy.m5.goal_position = -50
-      time.sleep(1)
-      self.poppy.m3.goal_position = 30
-      time.sleep(1)
