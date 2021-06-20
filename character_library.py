@@ -6,12 +6,19 @@ class CharacterLibrary:
       self.poppy = poppy
 
    def WriteA(self):
+      self.poppy.m1.goal_position = 5
+      time.sleep(0.5)
+      self.poppy.m5.goal_position = -90
+      time.sleep(0.5)
+      self.poppy.m3.goal_position = 90
+      time.sleep(0.5)
+
       self.poppy.m1.moving_speed = 40
       self.poppy.m2.moving_speed = 40
       self.poppy.m3.moving_speed = 40
       self.poppy.m5.moving_speed = 40
       self.poppy.m4.moving_speed = 40
-      
+
       self.poppy.m1.goal_position = 0
       self.poppy.m2.goal_position = 30
       self.poppy.m5.goal_position = -60
@@ -31,24 +38,25 @@ class CharacterLibrary:
 
       self.poppy.m3.goal_position = 0
       time.sleep(0.5)
-      self.poppy.m2.goal_position = 0
-      self.poppy.m3.goal_position = 0
-      self.poppy.m4.goal_position = 0
       self.poppy.m5.goal_position = 0
-      self.poppy.m6.goal_position = 0
-      time.sleep(1)
+      time.sleep(0.5)
+      self.poppy.m1.goal_position = 0
+      time.sleep(0.5)
+      self.poppy.m2.goal_position = 0
+      time.sleep(0.5)
 
       self.poppy.m6.goal_position = -15
       time.sleep(1)
       self.poppy.m1.goal_position = 0
+      time.sleep(0.5)
       self.poppy.m5.goal_position = -100
-      self.poppy.m3.goal_position = 120
-      self.poppy.m6.moving_speed = 40
-      time.sleep(1)
-      self.poppy.m4.goal_position = 5
-      time.sleep(1)
-      self.poppy.m4.goal_position = -5
-      time.sleep(1)
+      time.sleep(0.5)
+      self.poppy.m3.goal_position = 100
+      time.sleep(0.5)
+      self.poppy.m4.goal_position = 6
+      time.sleep(0.5)
+      self.poppy.m4.goal_position = -6
+      time.sleep(0.5)
 
    def WriteB(self):
       print ("B")
