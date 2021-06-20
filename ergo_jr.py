@@ -31,7 +31,8 @@ def InitializeErgoJr(poppy):
     poppy.m6.moving_speed = 100
 
 def BackToRestPosture(poppy):
-    poppy.m1.goal_position = 0
+    poppy.m3.goal_position = 0
+    time.sleep(1)
     poppy.m2.goal_position = 0
     poppy.m3.goal_position = 0
     poppy.m4.goal_position = 0
@@ -40,7 +41,7 @@ def BackToRestPosture(poppy):
     time.sleep(1)
 
 def WriteInitPos(poppy):
-    poppy.m1.goal_position = 30
+    poppy.m1.goal_position = 5
     time.sleep(1)
     poppy.m5.goal_position = -90
     time.sleep(1)
