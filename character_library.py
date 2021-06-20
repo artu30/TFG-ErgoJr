@@ -42,7 +42,7 @@ class CharacterLibrary:
       time.sleep(1)
       self.poppy.m1.goal_position = 0
       self.poppy.m5.goal_position = -90
-      self.poppy.m3.goal_position = 110
+      self.poppy.m3.goal_position = 120
       self.poppy.m6.moving_speed = 40
       time.sleep(1)
       self.poppy.m4.goal_position = 10
