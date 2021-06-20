@@ -44,7 +44,7 @@ def WriteInitPos(poppy):
     time.sleep(1)
     poppy.m5.goal_position = -60
     time.sleep(1)
-    poppy.m3.goal_position = 60
+    poppy.m3.goal_position = 90
     time.sleep(1)
 
 print("Write a character")
