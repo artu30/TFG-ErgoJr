@@ -11,7 +11,7 @@ class CharacterLibrary:
       self.poppy.m5.moving_speed = 40
       
       
-      time.sleep(1)
+      time.sleep(10)
 
    def WriteB(self):
       print ("B")
