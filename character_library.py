@@ -32,9 +32,11 @@ class CharacterLibrary:
       self.poppy.m6.goal_position = 0
       time.sleep(1)
 
+      self.poppy.m6.goal_position = 15
+      time.sleep(1)
       self.poppy.m1.goal_position = 0
       self.poppy.m5.goal_position = -90
-      self.poppy.m3.goal_position = 75
+      self.poppy.m3.goal_position = 90
       time.sleep(1)
       self.poppy.m4.goal_position = 10
       time.sleep(1)
