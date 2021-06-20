@@ -40,14 +40,6 @@ def BackToRestPosture(poppy):
     poppy.m6.goal_position = 0
     time.sleep(1)
 
-def WriteInitPos(poppy):
-    poppy.m1.goal_position = 5
-    time.sleep(1)
-    poppy.m5.goal_position = -90
-    time.sleep(1)
-    poppy.m3.goal_position = 90
-    time.sleep(1)
-
 print("Write a character")
 
 while 1:
@@ -94,10 +86,8 @@ while 1:
         InitializeErgoJr(poppy)
         BackToRestPosture(poppy)
         
-        WriteInitPos(poppy)
-
         operaciones[ch]()
-        time.sleep(4)
+        time.sleep(2)
 
         BackToRestPosture(poppy)
         time.sleep(4)
