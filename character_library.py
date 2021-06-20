@@ -2,89 +2,98 @@ import time
 from pypot.creatures import PoppyErgoJr
 
 class CharacterLibrary:
-    def __init__(self, poppy):
-        self.poppy = poppy
+   def __init__(self, poppy):
+      self.poppy = poppy
 
-    def WriteA(self):
-         self.poppy.m1.goal_position = 30
-         time.sleep(1)
-         self.poppy.m5.goal_position = -30
-         time.sleep(1)
-         self.poppy.m3.goal_position = 50
-         time.sleep(1)
-         self.poppy.m1.moving_speed = 20
-        
-    def WriteB(self):
-       print ("B")
+   def WriteA(self):
+      WriteInitPos()
+      self.poppy.m1.moving_speed = 20
+      self.poppy.m1.goal_position = 0
+      self.poppy.m3.moving_speed = 60
+      self.poppy.m3.goal_position = 0
+      self.poppy.m5.moving_speed = 60
+      self.poppy.m3.goal_position = 30
+      time.sleep(4)
 
-    def WriteC(self):
-       print ("C")
+   def WriteB(self):
+      print ("B")
 
-    def WriteD(self):
-       print ("D")
+   def WriteC(self):
+      print ("C")
 
-    def WriteE(self):
-       print ("E")
+   def WriteD(self):
+      print ("D")
 
-    def WriteF(self):
-       print ("F")
+   def WriteE(self):
+      print ("E")
 
-    def WriteG(self):
-       print ("G")
+   def WriteF(self):
+      print ("F")
 
-    def WriteH(self):
-       print ("H")
+   def WriteG(self):
+      print ("G")
 
-    def WriteI(self):
-       print ("I")
+   def WriteH(self):
+      print ("H")
 
-    def WriteJ(self):
-       print ("J")
+   def WriteI(self):
+      print ("I")
 
-    def WriteK(self):
-       print ("K")
+   def WriteJ(self):
+      print ("J")
 
-    def WriteL(self):
-       print ("L")
+   def WriteK(self):
+      print ("K")
 
-    def WriteM(self):
-       print ("M")
+   def WriteL(self):
+      print ("L")
 
-    def WriteN(self):
-       print ("N")
+   def WriteM(self):
+      print ("M")
 
-    def WriteO(self):
-       print ("O")
+   def WriteN(self):
+      print ("N")
 
-    def WriteP(self):
-       print ("P")
+   def WriteO(self):
+      print ("O")
 
-    def WriteQ(self):
-       print ("Q")
+   def WriteP(self):
+      print ("P")
 
-    def WriteR(self):
-       print ("R")
+   def WriteQ(self):
+      print ("Q")
 
-    def WriteS(self):
-       print ("S")
+   def WriteR(self):
+      print ("R")
 
-    def WriteT(self):
-       print ("T")
+   def WriteS(self):
+      print ("S")
 
-    def WriteU(self):
-       print ("U")
+   def WriteT(self):
+      print ("T")
 
-    def WriteV(self):
-       print ("V")
+   def WriteU(self):
+      print ("U")
 
-    def WriteW(self):
-       print ("W")
+   def WriteV(self):
+      print ("V")
 
-    def WriteX(self):
-       print ("X")
+   def WriteW(self):
+      print ("W")
 
-    def WriteY(self):
-       print ("Y")
+   def WriteX(self):
+      print ("X")
 
-    def WriteZ(self):
-       print ("Z")
+   def WriteY(self):
+      print ("Y")
+
+   def WriteZ(self):
+      print ("Z")
+
+   def WriteInitPos(self):
+      self.poppy.m1.goal_position = 30
+      time.sleep(1)
+      self.poppy.m5.goal_position = -50
+      time.sleep(1)
+      self.poppy.m3.goal_position = 30
+      time.sleep(1)
