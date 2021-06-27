@@ -52,7 +52,6 @@ advertise_service( server_sock, "AquaPiServer",
                    service_id = uuid,
                    service_classes = [ uuid, SERIAL_PORT_CLASS ],
                    profiles = [ SERIAL_PORT_PROFILE ]
-#                   protocols = [ OBEX_UUID ] 
                     )
 
 while True:
@@ -96,15 +95,15 @@ while True:
     InitializeErgoJr(poppy)
     BackToRestPosture(poppy)
 
-	try:
+    try:
         data = client_sock.recv(1024)
 
         operaciones[data]()
 
         BackToRestPosture(poppy)
 
-	except IOError:
-		pass
+    except IOError:
+	    pass
 
 	except KeyboardInterrupt:
 		print "disconnected"
