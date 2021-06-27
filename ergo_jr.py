@@ -56,9 +56,8 @@ advertise_service( server_sock, "AquaPiServer",
 while True:
     print ("Waiting for connection on RFCOMM channel %d", port)
 
-	client_sock, client_info = server_sock.accept()
-	print ("Accepted connection from ", client_info)
-
+	client_sock = server_sock.accept()
+    
     poppy = PoppyErgoJr(camera='dummy')
 
     CharacterManager = CharacterLibrary(poppy)
