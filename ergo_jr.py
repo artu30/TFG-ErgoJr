@@ -106,8 +106,8 @@ while True:
 	    pass
 
     except KeyboardInterrupt:
-        print "disconnected"
+        print ("disconnected")
         client_sock.close()
         server_sock.close()
-        print "all done"
+        print ("all done")
         break
