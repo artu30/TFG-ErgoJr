@@ -9,6 +9,9 @@ from bluetooth import *
 from character_library import *
 from pypot.creatures import PoppyErgoJr
 
+os.system('modprobe w1-gpio')
+os.system('modprobe w1-therm')
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(17, GPIO.OUT)
 
