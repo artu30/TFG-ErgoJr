@@ -1,19 +1,40 @@
 import time
 import argparse
+import os
+import glob
+import time
+import RPi.GPIO as GPIO
+from bluetooth import *
 from character_library import *
 from pypot.creatures import PoppyErgoJr
 
-def getchar():
-   #Returns a single character from standard input
-   import tty, termios, sys
-   fd = sys.stdin.fileno()
-   old_settings = termios.tcgetattr(fd)
-   try:
-      tty.setraw(sys.stdin.fileno())
-      ch = sys.stdin.read(1)
-   finally:
-      termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
-   return ch
+os.system('modprobe w1-gpio')
+os.system('modprobe w1-therm')
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17, GPIO.OUT)
+
+base_dir = '/sys/bus/w1/devices/'
+device_folder = glob.glob(base_dir + '28*')[0]
+device_file = device_folder + '/w1_slave'
+
+def read_temp_raw():
+    f = open(device_file, 'r')
+    lines = f.readlines()
+    f.close()
+    return lines
+
+def read_temp():
+    lines = read_temp_raw()
+    while lines[0].strip()[–3:] != 'YES':
+        time.sleep(0.2)
+        lines = read_temp_raw()
+    equals_pos = lines[1].find('t=')
+    if equals_pos != –1:
+        temp_string = lines[1][equals_pos+2:]
+        temp_c = float(temp_string) / 1000.0
+        temp_f = temp_c * 9.0 / 5.0 + 32.0
+        return temp_c
 
 def InitializeErgoJr(poppy):
     poppy.m1.compliant = False
@@ -40,58 +61,76 @@ def BackToRestPosture(poppy):
     poppy.m6.goal_position = 0
     time.sleep(1)
 
-print("Write a character")
+server_sock=BluetoothSocket( RFCOMM )
+server_sock.bind(("",PORT_ANY))
+server_sock.listen(1)
 
-while 1:
-    ch = getchar()
-    if ch.strip() == '':
-        print('bye!')
-        break
-    else:
-        print('Writting . . .')
+port = server_sock.getsockname()[1]
 
-        poppy = PoppyErgoJr(camera='dummy')
+uuid = "94f39d29-7d6d-437d-973b-fba39e49d4ee"
 
-        CharacterManager = CharacterLibrary(poppy)
+advertise_service( server_sock, "AquaPiServer",
+                   service_id = uuid,
+                   service_classes = [ uuid, SERIAL_PORT_CLASS ],
+                   profiles = [ SERIAL_PORT_PROFILE ]
+                    )
 
-        operaciones = { 
-        'a': CharacterManager.WriteA, 
-        'b': CharacterManager.WriteB, 
-        'c': CharacterManager.WriteC, 
-        'd': CharacterManager.WriteD,
-        'e': CharacterManager.WriteE, 
-        'f': CharacterManager.WriteF, 
-        'g': CharacterManager.WriteG, 
-        'h': CharacterManager.WriteH,
-        'i': CharacterManager.WriteI, 
-        'j': CharacterManager.WriteJ, 
-        'k': CharacterManager.WriteQ, 
-        'l': CharacterManager.WriteL,
-        'm': CharacterManager.WriteM, 
-        'n': CharacterManager.WriteN, 
-        'o': CharacterManager.WriteO, 
-        'p': CharacterManager.WriteP,
-        'q': CharacterManager.WriteQ, 
-        'r': CharacterManager.WriteR, 
-        's': CharacterManager.WriteS, 
-        't': CharacterManager.WriteT,
-        'u': CharacterManager.WriteU, 
-        'v': CharacterManager.WriteV, 
-        'w': CharacterManager.WriteW, 
-        'x': CharacterManager.WriteX,
-        'y': CharacterManager.WriteY, 
-        'z': CharacterManager.WriteZ
-        }
+while True:
+    print "Waiting for connection on RFCOMM channel %d" % port
 
-        InitializeErgoJr(poppy)
+	client_sock, client_info = server_sock.accept()
+	print "Accepted connection from ", client_info
+
+    poppy = PoppyErgoJr(camera='dummy')
+
+    CharacterManager = CharacterLibrary(poppy)
+
+    operaciones = { 
+    'a': CharacterManager.WriteA, 
+    'b': CharacterManager.WriteB, 
+    'c': CharacterManager.WriteC, 
+    'd': CharacterManager.WriteD,
+    'e': CharacterManager.WriteE, 
+    'f': CharacterManager.WriteF, 
+    'g': CharacterManager.WriteG, 
+    'h': CharacterManager.WriteH,
+    'i': CharacterManager.WriteI, 
+    'j': CharacterManager.WriteJ, 
+    'k': CharacterManager.WriteQ, 
+    'l': CharacterManager.WriteL,
+    'm': CharacterManager.WriteM, 
+    'n': CharacterManager.WriteN, 
+    'o': CharacterManager.WriteO, 
+    'p': CharacterManager.WriteP,
+    'q': CharacterManager.WriteQ, 
+    'r': CharacterManager.WriteR, 
+    's': CharacterManager.WriteS, 
+    't': CharacterManager.WriteT,
+    'u': CharacterManager.WriteU, 
+    'v': CharacterManager.WriteV, 
+    'w': CharacterManager.WriteW, 
+    'x': CharacterManager.WriteX,
+    'y': CharacterManager.WriteY, 
+    'z': CharacterManager.WriteZ
+    }
+
+    InitializeErgoJr(poppy)
+    BackToRestPosture(poppy)
+
+	try:
+        data = client_sock.recv(1024)
+
+        operaciones[data]()
+
         BackToRestPosture(poppy)
-        
-        operaciones[ch]()
-        time.sleep(2)
 
-        BackToRestPosture(poppy)
-        time.sleep(4)
-        break
+	except IOError:
+		pass
 
+	except KeyboardInterrupt:
+		print "disconnected"
+		client_sock.close()
+		server_sock.close()
+		print "all done"
 
-
+		break
