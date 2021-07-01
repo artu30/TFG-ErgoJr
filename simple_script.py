@@ -5,6 +5,7 @@ import glob
 import time
 import RPi.GPIO as GPIO
 import socket
+import logging, sys
 from bluetooth import *
 from character_library import *
 from pypot.creatures import PoppyErgoJr
@@ -32,6 +33,9 @@ def BackToRestPosture(poppy):
     poppy.m5.goal_position = 0
     poppy.m6.goal_position = 0
     time.sleep(1)
+
+
+logging.basicConfig(stream=sys.stderr, level="DEBUG")
 
 poppy = PoppyErgoJr(camera='dummy')
 
