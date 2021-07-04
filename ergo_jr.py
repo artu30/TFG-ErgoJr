@@ -90,9 +90,9 @@ while True:
     BackToRestPosture(poppy)
 
     try:
-        data = client_sock.recv(1024)
+        (data, answer) = client_sock.recv(1024)
 
-        operaciones[data[0].decode("utf-8")]()
+        operaciones[data.decode("utf-8")]()
 
         BackToRestPosture(poppy)
 
