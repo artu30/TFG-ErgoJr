@@ -72,7 +72,7 @@ class CharacterLibrary:
       self.poppy.m3.goal_position = 60
       time.sleep(1)
 
-      self.poppy.m1.goal_position = -15
+      self.poppy.m1.goal_position = -5
       time.sleep(1)
 
    def WriteC(self):
