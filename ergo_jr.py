@@ -25,8 +25,7 @@ def InitializeErgoJr(poppy):
     poppy.m6.moving_speed = 100
 
 def BackToRestPosture(poppy):
-    poppy.m3.goal_position = 0
-    time.sleep(1)
+    poppy.m1.goal_position = 0
     poppy.m2.goal_position = 0
     poppy.m3.goal_position = 0
     poppy.m4.goal_position = 0
@@ -94,6 +93,7 @@ while True:
 
         operaciones[data.decode("utf-8")]()
 
+        InitializeErgoJr(poppy)
         BackToRestPosture(poppy)
 
     except IOError:
