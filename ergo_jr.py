@@ -48,47 +48,47 @@ advertise_service( server_sock, "AquaPiServer",
                    profiles = [ SERIAL_PORT_PROFILE ]
                     )
 
+poppy = PoppyErgoJr(camera='dummy')
+
+InitializeErgoJr(poppy)
+BackToRestPosture(poppy)
+
+CharacterManager = CharacterLibrary(poppy)
+
+operaciones = { 
+'a': CharacterManager.WriteA, 
+'b': CharacterManager.WriteB, 
+'c': CharacterManager.WriteC, 
+'d': CharacterManager.WriteD,
+'e': CharacterManager.WriteE, 
+'f': CharacterManager.WriteF, 
+'g': CharacterManager.WriteG, 
+'h': CharacterManager.WriteH,
+'i': CharacterManager.WriteI, 
+'j': CharacterManager.WriteJ, 
+'k': CharacterManager.WriteQ, 
+'l': CharacterManager.WriteL,
+'m': CharacterManager.WriteM, 
+'n': CharacterManager.WriteN, 
+'o': CharacterManager.WriteO, 
+'p': CharacterManager.WriteP,
+'q': CharacterManager.WriteQ, 
+'r': CharacterManager.WriteR, 
+'s': CharacterManager.WriteS, 
+'t': CharacterManager.WriteT,
+'u': CharacterManager.WriteU, 
+'v': CharacterManager.WriteV, 
+'w': CharacterManager.WriteW, 
+'x': CharacterManager.WriteX,
+'y': CharacterManager.WriteY, 
+'z': CharacterManager.WriteZ
+}
+
 while True:
     print ("Waiting for connection on RFCOMM channel %d", port)
 
     client_sock, addr = server_sock.accept()
     
-    poppy = PoppyErgoJr(camera='dummy')
-
-    CharacterManager = CharacterLibrary(poppy)
-
-    operaciones = { 
-    'a': CharacterManager.WriteA, 
-    'b': CharacterManager.WriteB, 
-    'c': CharacterManager.WriteC, 
-    'd': CharacterManager.WriteD,
-    'e': CharacterManager.WriteE, 
-    'f': CharacterManager.WriteF, 
-    'g': CharacterManager.WriteG, 
-    'h': CharacterManager.WriteH,
-    'i': CharacterManager.WriteI, 
-    'j': CharacterManager.WriteJ, 
-    'k': CharacterManager.WriteQ, 
-    'l': CharacterManager.WriteL,
-    'm': CharacterManager.WriteM, 
-    'n': CharacterManager.WriteN, 
-    'o': CharacterManager.WriteO, 
-    'p': CharacterManager.WriteP,
-    'q': CharacterManager.WriteQ, 
-    'r': CharacterManager.WriteR, 
-    's': CharacterManager.WriteS, 
-    't': CharacterManager.WriteT,
-    'u': CharacterManager.WriteU, 
-    'v': CharacterManager.WriteV, 
-    'w': CharacterManager.WriteW, 
-    'x': CharacterManager.WriteX,
-    'y': CharacterManager.WriteY, 
-    'z': CharacterManager.WriteZ
-    }
-
-    InitializeErgoJr(poppy)
-    BackToRestPosture(poppy)
-
     try:
         data = client_sock.recv(1024)
 
