@@ -73,7 +73,7 @@ class CharacterLibrary:
       self.poppy.m3.goal_position = 60
       time.sleep(2)
 
-      self.poppy.m1.goal_position = -8
+      self.poppy.m1.goal_position = -10
       time.sleep(2)
 
       self.poppy.m2.goal_position = 15
@@ -84,15 +84,13 @@ class CharacterLibrary:
       self.poppy.m1.goal_position = 0
       time.sleep(2)
 
-      self.poppy.m1.goal_position = -8
-      time.sleep(2)
-
-      self.poppy.m2.goal_position = 0
-      self.poppy.m5.goal_position = -90
-      self.poppy.m3.goal_position = 90
+      self.poppy.m1.goal_position = -10
       time.sleep(2)
 
       self.poppy.m1.goal_position = 0
+      self.poppy.m2.goal_position = 0
+      self.poppy.m5.goal_position = -90
+      self.poppy.m3.goal_position = 90
       time.sleep(2)
 
    def WriteC(self):
