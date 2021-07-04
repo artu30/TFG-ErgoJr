@@ -62,15 +62,10 @@ class CharacterLibrary:
       self.poppy.m3.goal_position = 90
       time.sleep(1)
 
-      self.poppy.m1.moving_speed = 40
-      self.poppy.m2.moving_speed = 40
-      self.poppy.m3.moving_speed = 40
-      self.poppy.m5.moving_speed = 40
-
       self.poppy.m2.goal_position = 40
       time.sleep(1)
 
-      self.poppy.m1.goal_position = -10
+      self.poppy.m1.goal_position = -5
       self.poppy.m2.goal_position = 30
       time.sleep(1)
 
@@ -78,7 +73,7 @@ class CharacterLibrary:
       self.poppy.m2.goal_position = 20
       time.sleep(1)
 
-      self.poppy.m1.goal_position = -10
+      self.poppy.m1.goal_position = -5
       self.poppy.m2.goal_position = 10
       time.sleep(1)
 
