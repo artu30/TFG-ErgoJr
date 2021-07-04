@@ -78,7 +78,7 @@ class CharacterLibrary:
       self.poppy.m2.goal_position = 20
       time.sleep(1)
 
-      self.poppy.m1.goal_position = -20
+      self.poppy.m1.goal_position = -10
       self.poppy.m2.goal_position = 10
       time.sleep(1)
 
