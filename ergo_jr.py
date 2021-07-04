@@ -36,6 +36,7 @@ def BackToRestPosture(poppy):
 
 server_sock=BluetoothSocket( RFCOMM )
 server_sock.bind(("",PORT_ANY))
+server_sock.listen(1)
 
 port = server_sock.getsockname()[1]
 
@@ -48,7 +49,6 @@ advertise_service( server_sock, "AquaPiServer",
                     )
 
 while True:
-    server_sock.listen(1)
     print ("Waiting for connection on RFCOMM channel %d", port)
 
     client_sock = server_sock.accept()
