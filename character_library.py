@@ -57,10 +57,9 @@ class CharacterLibrary:
       time.sleep(0.5)
 
    def WriteB(self):
-      self.poppy.m3.goal_position = 90
-      time.sleep(0.5)
       self.poppy.m5.goal_position = -90
-      
+      time.sleep(0.5)
+      self.poppy.m3.goal_position = 90
       time.sleep(1)
 
       self.poppy.m1.moving_speed = 40
@@ -76,15 +75,15 @@ class CharacterLibrary:
       self.poppy.m2.goal_position = 20
       self.poppy.m3.goal_position = 70
       self.poppy.m5.goal_position = -70
-      time.sleep(1)
+      time.sleep(2)
 
       self.poppy.m1.goal_position = 0
       self.poppy.m2.goal_position = 10
       self.poppy.m3.goal_position = 80
       self.poppy.m5.goal_position = -80
-      time.sleep(1)
+      time.sleep(2)
 
-      self.poppy.m1.goal_position = -10
+      self.poppy.m1.goal_position = -15
       self.poppy.m2.goal_position = 0
       self.poppy.m3.goal_position = 90
       self.poppy.m5.goal_position = -90
