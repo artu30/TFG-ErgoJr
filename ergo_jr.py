@@ -91,6 +91,8 @@ while True:
     try:
         data = client_sock.recv(1024)
 
+        print (data.decode("utf-8"))
+
         operaciones[data.decode("utf-8")]()
 
         InitializeErgoJr(poppy)
