@@ -91,12 +91,15 @@ while True:
     try:
         data = client_sock.recv(1024)
 
-        print (data.decode("utf-8"))
+        cadena = data.decode("utf-8")
 
-        operaciones[data.decode("utf-8")]()
+        for caracter in cadena:
+            print (caracter)
 
-        InitializeErgoJr(poppy)
-        BackToRestPosture(poppy)
+            operaciones[caracter]()
+
+            InitializeErgoJr(poppy)
+            BackToRestPosture(poppy)
 
     except IOError:
 	    pass
