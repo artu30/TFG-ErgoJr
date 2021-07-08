@@ -93,6 +93,8 @@ while True:
 
         cadena = data.decode("utf-8")
 
+        print(cadena)
+
         for caracter in cadena:
             print (caracter)
 
