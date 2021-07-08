@@ -83,11 +83,6 @@ operaciones = {
 'z': CharacterManager.WriteZ
 }
 
-operaciones["b"]()
-
-InitializeErgoJr(poppy)
-BackToRestPosture(poppy)
-
 while True:
     print ("Waiting for connection on RFCOMM channel %d", port)
 
