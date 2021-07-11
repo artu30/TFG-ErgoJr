@@ -83,8 +83,8 @@ operaciones = {
 'z': CharacterManager.WriteZ
 }
 
-time.sleep(10)
-abecedario = "abcdefghijklmnopqrstuvwxyz"
+time.sleep(5)
+abecedario = "a"
 
 for letra in abecedario:
     operaciones[letra]()
