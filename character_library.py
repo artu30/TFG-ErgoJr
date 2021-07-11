@@ -58,20 +58,20 @@ class CharacterLibrary:
       self.poppy.m3.goal_position = 90
       time.sleep(2)
 
-      self.poppy.m2.goal_position = 30
+      self.poppy.m2.goal_position = 20
       self.poppy.m5.goal_position = -60
       self.poppy.m3.goal_position = 60
       time.sleep(2)
 
-      self.poppy.m1.goal_position = -10
+      self.poppy.m1.goal_position = -5
       time.sleep(2)
 
-      self.poppy.m2.goal_position = 15
+      self.poppy.m2.goal_position = 10
       self.poppy.m5.goal_position = -75
       self.poppy.m3.goal_position = 75
       time.sleep(2)
 
-      self.poppy.m1.goal_position = 10
+      self.poppy.m1.goal_position = 5
       time.sleep(2)
 
       self.poppy.m1.goal_position = -10
@@ -110,12 +110,12 @@ class CharacterLibrary:
       self.poppy.m1.goal_position = 0
       time.sleep(2)
 
-      self.poppy.m2.goal_position = 30
+      self.poppy.m2.goal_position = 20
       self.poppy.m5.goal_position = -60
       self.poppy.m3.goal_position = 60
       time.sleep(2)
 
-      self.poppy.m1.goal_position = -10
+      self.poppy.m1.goal_position = -5
       time.sleep(2)
 
       self.poppy.m3.goal_position = 30
@@ -150,7 +150,7 @@ class CharacterLibrary:
       self.poppy.m3.goal_position = 75
       time.sleep(2)
 
-      self.poppy.m1.goal_position = 10
+      self.poppy.m1.goal_position = 5
       self.poppy.m2.goal_position = 0
       self.poppy.m5.goal_position = -90
       self.poppy.m3.goal_position = 90
