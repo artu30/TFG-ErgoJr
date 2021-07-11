@@ -26,7 +26,7 @@ class CharacterLibrary:
       self.poppy.m1.goal_position = 0
       time.sleep(0.5)
       self.poppy.m5.goal_position = -90
-      time.sleep(0.5)
+      time.sleep(1)
       self.poppy.m3.goal_position = 90
       time.sleep(2)
 
@@ -39,7 +39,7 @@ class CharacterLibrary:
       time.sleep(2)
 
    def RightInitPos(self):
-      self.poppy.m1.goal_position = 5
+      self.poppy.m1.goal_position = -5
       time.sleep(0.5)
       self.poppy.m5.goal_position = -90
       time.sleep(0.5)
@@ -128,7 +128,7 @@ class CharacterLibrary:
       self.PencilUp()
 
    def WriteD(self):
-      self.CenterinitPos()
+      self.CenterInitPos()
 
       self.GoUp()
 
