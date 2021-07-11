@@ -5,13 +5,63 @@ class CharacterLibrary:
    def __init__(self, poppy):
       self.poppy = poppy
 
-   def WriteA(self):
+   def PencilUp(self):
+      self.poppy.m2.goal_position = -10
+      time.sleep(0.1)
+      self.poppy.m3.goal_position = 30
+      time.sleep(0.5)
+      self.poppy.m5.goal_position = -110
+      time.sleep(0.1)
+      self.poppy.m6.goal_position = -30
+      time.sleep(1)
+      self.poppy.m1.goal_position = 0
+      self.poppy.m2.goal_position = 0
+      self.poppy.m3.goal_position = 0
+      self.poppy.m4.goal_position = 0
+      self.poppy.m5.goal_position = 0
+      self.poppy.m6.goal_position = 0
+      time.sleep(2)
+
+   def CenterInitPos(self):
+      self.poppy.m1.goal_position = 0
+      time.sleep(0.5)
+      self.poppy.m5.goal_position = -90
+      time.sleep(0.5)
+      self.poppy.m3.goal_position = 90
+      time.sleep(2)
+
+   def LeftInitPos(self):
       self.poppy.m1.goal_position = 5
       time.sleep(0.5)
       self.poppy.m5.goal_position = -90
       time.sleep(0.5)
       self.poppy.m3.goal_position = 90
       time.sleep(2)
+
+   def RightInitPos(self):
+      self.poppy.m1.goal_position = 5
+      time.sleep(0.5)
+      self.poppy.m5.goal_position = -90
+      time.sleep(0.5)
+      self.poppy.m3.goal_position = 90
+      time.sleep(2)
+
+   def GoUp(self):
+      self.poppy.m2.goal_position = 15
+      self.poppy.m5.goal_position = -60
+      self.poppy.m3.goal_position = 60
+      time.sleep(2)
+
+   def CenterInitPos(self):
+      self.poppy.m5.goal_position = -60
+      time.sleep(0.5)
+      self.poppy.m3.goal_position = 60
+      time.sleep(2)
+      self.poppy.m2.goal_position = 15
+      time.sleep(1)
+
+   def WriteA(self):
+      LeftInitPos(self)
 
       self.poppy.m1.goal_position = 0
       self.poppy.m2.goal_position = 30
@@ -24,62 +74,21 @@ class CharacterLibrary:
       self.poppy.m3.goal_position = 90
       time.sleep(2)
 
-      self.poppy.m2.goal_position = -10
-      time.sleep(0.1)
-      self.poppy.m3.goal_position = 30
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -110
-      time.sleep(0.1)
-      self.poppy.m6.goal_position = -30
-      time.sleep(1)
-      self.poppy.m1.goal_position = 0
-      self.poppy.m2.goal_position = 0
-      self.poppy.m3.goal_position = 0
-      self.poppy.m4.goal_position = 0
-      self.poppy.m5.goal_position = 0
-      self.poppy.m6.goal_position = 0
-      time.sleep(2)
+      PencilUp(self)
 
-      self.poppy.m5.goal_position = -60
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 60
-      time.sleep(2)
+      CenterInitPos(self)
 
-      self.poppy.m2.goal_position = 15
-      time.sleep(1)
-
-      self.poppy.m1.goal_position = 8
+      self.poppy.m1.goal_position = 6
       time.sleep(0.5)
-      self.poppy.m1.goal_position = -8
+      self.poppy.m1.goal_position = -6
       time.sleep(0.5)
 
-      self.poppy.m2.goal_position = -10
-      time.sleep(0.1)
-      self.poppy.m3.goal_position = 30
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -110
-      time.sleep(0.1)
-      self.poppy.m6.goal_position = -30
-      time.sleep(1)
-      self.poppy.m1.goal_position = 0
-      self.poppy.m2.goal_position = 0
-      self.poppy.m3.goal_position = 0
-      self.poppy.m4.goal_position = 0
-      self.poppy.m5.goal_position = 0
-      self.poppy.m6.goal_position = 0
-      time.sleep(2)
+      PencilUp(self)
 
    def WriteB(self):
-      self.poppy.m1.goal_position = 0
-      self.poppy.m5.goal_position = -90
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 90
-      time.sleep(2)
+      CenterInitPos(self)
 
-      self.poppy.m2.goal_position = 15
-      self.poppy.m5.goal_position = -60
-      self.poppy.m3.goal_position = 60
-      time.sleep(2)
+      GoUp(self)
 
       self.poppy.m1.goal_position = -8
       time.sleep(2)
@@ -103,68 +112,25 @@ class CharacterLibrary:
       self.poppy.m1.goal_position = 0
       time.sleep(2)
 
-      self.poppy.m2.goal_position = -10
-      time.sleep(0.1)
-      self.poppy.m3.goal_position = 30
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -110
-      time.sleep(0.1)
-      self.poppy.m6.goal_position = -30
-      time.sleep(1)
-      self.poppy.m1.goal_position = 0
-      self.poppy.m2.goal_position = 0
-      self.poppy.m3.goal_position = 0
-      self.poppy.m4.goal_position = 0
-      self.poppy.m5.goal_position = 0
-      self.poppy.m6.goal_position = 0
-      time.sleep(2)
+      PencilUp(self)
 
    def WriteC(self):
-      self.poppy.m1.goal_position = -5
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -100
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 100
-      time.sleep(2)
+      RightInitPos(self)
 
       self.poppy.m1.goal_position = 0
       time.sleep(2)
 
-      self.poppy.m2.goal_position = 10
-      self.poppy.m5.goal_position = -60
-      self.poppy.m3.goal_position = 60
-      time.sleep(2)
+      GoUp(self)
 
       self.poppy.m1.goal_position = -5
       time.sleep(2)
 
-      self.poppy.m2.goal_position = -10
-      time.sleep(0.1)
-      self.poppy.m3.goal_position = 30
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -110
-      time.sleep(0.1)
-      self.poppy.m6.goal_position = -30
-      time.sleep(1)
-      self.poppy.m1.goal_position = 0
-      self.poppy.m2.goal_position = 0
-      self.poppy.m3.goal_position = 0
-      self.poppy.m4.goal_position = 0
-      self.poppy.m5.goal_position = 0
-      self.poppy.m6.goal_position = 0
-      time.sleep(2)
+      PencilUp(self)
 
    def WriteD(self):
-      self.poppy.m1.goal_position = 0
-      self.poppy.m5.goal_position = -90
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 90
-      time.sleep(2)
+      CenterinitPos(self)
 
-      self.poppy.m2.goal_position = 30
-      self.poppy.m5.goal_position = -60
-      self.poppy.m3.goal_position = 60
-      time.sleep(2)
+      GoUp(self)
 
       self.poppy.m1.goal_position = -10
       self.poppy.m2.goal_position = 15
@@ -178,68 +144,27 @@ class CharacterLibrary:
       self.poppy.m3.goal_position = 90
       time.sleep(2)
 
-      self.poppy.m2.goal_position = -10
-      time.sleep(0.1)
-      self.poppy.m3.goal_position = 30
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -110
-      time.sleep(0.1)
-      self.poppy.m6.goal_position = -30
-      time.sleep(1)
-      self.poppy.m1.goal_position = 0
-      self.poppy.m2.goal_position = 0
-      self.poppy.m3.goal_position = 0
-      self.poppy.m4.goal_position = 0
-      self.poppy.m5.goal_position = 0
-      self.poppy.m6.goal_position = 0
-      time.sleep(2)
+      PencilUp(self)
 
    def WriteE(self):
-      self.poppy.m1.goal_position = -5
-      self.poppy.m5.goal_position = -90
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 90
+      RightInitPos(self)
+
+      self.poppy.m1.goal_position = 0
       time.sleep(2)
 
-      self.poppy.m2.moving_speed = 40
-      self.poppy.m3.moving_speed = 40
-      self.poppy.m5.moving_speed = 40
-
-      self.poppy.m1.goal_position = 5
-      time.sleep(2)
-
-      self.poppy.m2.goal_position = 30
-      self.poppy.m5.goal_position = -60
-      self.poppy.m3.goal_position = 60
-      time.sleep(2)
+      GoUp(self)
 
       self.poppy.m1.goal_position = -5
       time.sleep(2)
 
-      self.poppy.m1.moving_speed = 100
-      self.poppy.m2.moving_speed = 100
-      self.poppy.m3.moving_speed = 100
-      self.poppy.m5.moving_speed = 100
+      PencilUp(self)
 
-      self.poppy.m3.goal_position = 0
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = 0
-      time.sleep(0.5)
-      self.poppy.m1.goal_position = 0
-      time.sleep(0.5)
-      self.poppy.m2.goal_position = 0
-      time.sleep(0.5)
+      CenterInitPos(self)
 
-      self.poppy.m6.goal_position = -15
-      time.sleep(1)
-      self.poppy.m1.goal_position = 0
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -100
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 100
-      time.sleep(0.5)
       self.poppy.m1.goal_position = -6
       time.sleep(0.5)
+
+      PencilUp(self)
 
    def WriteF(self):
       self.poppy.m1.goal_position = 5
