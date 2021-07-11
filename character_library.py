@@ -84,9 +84,9 @@ class CharacterLibrary:
 
       self.CenterUpPos()
 
-      self.poppy.m1.goal_position = 6
+      self.poppy.m1.goal_position = 4
       time.sleep(0.5)
-      self.poppy.m1.goal_position = -6
+      self.poppy.m1.goal_position = -4
       time.sleep(0.5)
 
       self.PencilUp()
@@ -123,7 +123,7 @@ class CharacterLibrary:
    def WriteC(self):
       self.RightInitPos()
 
-      self.poppy.m1.goal_position = 0
+      self.poppy.m1.goal_position = 3
       time.sleep(2)
 
       self.GoUp()
@@ -155,7 +155,7 @@ class CharacterLibrary:
    def WriteE(self):
       self.RightInitPos()
 
-      self.poppy.m1.goal_position = 0
+      self.poppy.m1.goal_position = 3
       time.sleep(2)
 
       self.GoUp()
@@ -170,7 +170,7 @@ class CharacterLibrary:
       self.poppy.m1.goal_position = -5
       time.sleep(0.5)
 
-      self.poppy.m1.goal_position = 5
+      self.poppy.m1.goal_position = 2
       time.sleep(0.5)
 
       self.PencilUp()
