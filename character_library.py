@@ -64,6 +64,7 @@ class CharacterLibrary:
       self.poppy.m5.goal_position = -78
       time.sleep(0.5)
       self.poppy.m3.goal_position = 78
+      time.sleep(2)
 
    def WriteA(self):
       self.LeftInitPos()
@@ -245,7 +246,7 @@ class CharacterLibrary:
    def WriteJ(self):
       self.LeftInitPos()
 
-      self.poppy.m1.goal_position = 0
+      self.poppy.m1.goal_position = -5
       time.sleep(2)
 
       self.GoUp()
