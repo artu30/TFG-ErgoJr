@@ -76,7 +76,7 @@ class CharacterLibrary:
 
       self.PencilUp()
 
-      self.CenterPos()
+      self.CenterUpPos()
 
       self.poppy.m1.goal_position = 6
       time.sleep(0.5)
@@ -159,7 +159,7 @@ class CharacterLibrary:
 
       self.PencilUp()
 
-      self.CenterPos()
+      self.CenterUpPos()
 
       self.poppy.m1.goal_position = -6
       time.sleep(0.5)
