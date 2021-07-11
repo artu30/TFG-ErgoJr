@@ -190,7 +190,7 @@ class CharacterLibrary:
       self.poppy.m1.goal_position = -5
       time.sleep(0.5)
 
-      self.poppy.m1.goal_position = 5
+      self.poppy.m1.goal_position = 0
       time.sleep(0.5)
 
       self.PencilUp()
@@ -228,7 +228,7 @@ class CharacterLibrary:
 
       self.CenterUpPos()
 
-      self.poppy.m1.goal_position = -3
+      self.poppy.m1.goal_position = -1
       time.sleep(0.5)
 
       self.poppy.m1.goal_position = 3
@@ -246,7 +246,7 @@ class CharacterLibrary:
    def WriteJ(self):
       self.LeftInitPos()
 
-      self.poppy.m1.goal_position = -5
+      self.poppy.m1.goal_position = -2
       time.sleep(2)
 
       self.GoUp()
