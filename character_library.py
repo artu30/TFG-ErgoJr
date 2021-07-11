@@ -33,17 +33,17 @@ class CharacterLibrary:
    def LeftInitPos(self):
       self.poppy.m1.goal_position = 2
       time.sleep(0.5)
-      self.poppy.m5.goal_position = -90
+      self.poppy.m5.goal_position = -110
       time.sleep(0.5)
-      self.poppy.m3.goal_position = 90
+      self.poppy.m3.goal_position = 110
       time.sleep(2)
 
    def RightInitPos(self):
       self.poppy.m1.goal_position = -2
       time.sleep(0.5)
-      self.poppy.m5.goal_position = -90
+      self.poppy.m5.goal_position = -110
       time.sleep(0.5)
-      self.poppy.m3.goal_position = 90
+      self.poppy.m3.goal_position = 110
       time.sleep(2)
 
    def GoUp(self):
@@ -203,7 +203,7 @@ class CharacterLibrary:
 
       self.RightInitPos()
 
-      self.poppy.m1.goal_position = 0
+      self.poppy.m1.goal_position = 2
       time.sleep(2)
 
       self.GoUp()
@@ -228,7 +228,7 @@ class CharacterLibrary:
 
       self.CenterUpPos()
 
-      self.poppy.m1.goal_position = -1
+      self.poppy.m1.goal_position = -3
       time.sleep(0.5)
 
       self.poppy.m1.goal_position = 3
