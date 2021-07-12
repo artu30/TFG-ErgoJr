@@ -83,7 +83,7 @@ class CharacterLibrary:
       time.sleep(2)
 
    def GoUp(self):
-      self.poppy.m2.goal_position = 10
+      self.poppy.m2.goal_position = 8
       self.poppy.m5.goal_position = -60
       self.poppy.m3.goal_position = 60
       time.sleep(2)
@@ -329,9 +329,15 @@ class CharacterLibrary:
 
       self.GoUp()
 
-      self.CenterUpPos()
+      self.poppy.m1.goal_position = -2
+      self.poppy.m5.goal_position = -78
+      self.poppy.m3.goal_position = 78
+      time.sleep(2)
 
-      self.RightTopPos()
+      self.poppy.m1.goal_position = -5
+      self.poppy.m5.goal_position = -60
+      self.poppy.m3.goal_position = 60
+      time.sleep(2)
 
       self.GoDown()
 
@@ -342,7 +348,9 @@ class CharacterLibrary:
 
       self.GoUp()
 
-      self.RightInitPos()
+      self.poppy.m1.goal_position = -2
+      self.poppy.m5.goal_position = -110
+      self.poppy.m3.goal_position = 110
 
       self.GoUp()
 
@@ -368,15 +376,14 @@ class CharacterLibrary:
 
       self.GoUp()
 
-      self.poppy.m1.goal_position = -5
+      self.poppy.m1.goal_position = -6
       time.sleep(2)
 
-      self.poppy.m2.goal_position = 5
       self.poppy.m5.goal_position = -75
       self.poppy.m3.goal_position = 75
       time.sleep(2)
 
-      self.poppy.m1.goal_position = 2
+      self.poppy.m1.goal_position = 5
       time.sleep(2)
 
       self.PencilUp()
@@ -398,35 +405,34 @@ class CharacterLibrary:
 
       self.CenterUpPos()
 
-      self.poppy.m5.goal_position = -90
-      time.sleep(0.5)
+      self.poppy.m1.goal_position = -4
+      self.poppy.m5.goal_position = -110
       self.poppy.m3.goal_position = 110
       time.sleep(2)
 
       self.PencilUp()
 
    def WriteR(self):
-      sself.CenterInitPos()
+      self.CenterInitPos()
 
       self.GoUp()
 
-      self.poppy.m1.goal_position = -5
+      self.poppy.m1.goal_position = -6
       time.sleep(2)
 
-      self.poppy.m2.goal_position = 5
       self.poppy.m5.goal_position = -75
       self.poppy.m3.goal_position = 75
       time.sleep(2)
 
-      self.poppy.m1.goal_position = 2
+      self.poppy.m1.goal_position = 5
       time.sleep(2)
 
       self.PencilUp()
 
       self.CenterUpPos()
 
-      self.poppy.m5.goal_position = -90
-      time.sleep(0.5)
+      self.poppy.m1.goal_position = -4
+      self.poppy.m5.goal_position = -110
       self.poppy.m3.goal_position = 110
       time.sleep(2)
 
