@@ -33,6 +33,9 @@ def BackToRestPosture(poppy):
     poppy.m6.goal_position = 0
     time.sleep(1)
 
+cmd = "hciconfig hci0 piscan"
+os.system(cmd)
+
 server_sock=BluetoothSocket( RFCOMM )
 server_sock.bind(("",PORT_ANY))
 server_sock.listen(1)
