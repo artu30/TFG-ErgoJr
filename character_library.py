@@ -329,10 +329,10 @@ class CharacterLibrary:
 
       self.GoUp()
 
-      self.poppy.m1.goal_position = -1
+      self.poppy.m1.goal_position = -2
       self.poppy.m2.goal_position = 2
-      self.poppy.m5.goal_position = -70
-      self.poppy.m3.goal_position = 70
+      self.poppy.m5.goal_position = -75
+      self.poppy.m3.goal_position = 75
       time.sleep(2)
 
       self.poppy.m1.goal_position = -3
@@ -350,13 +350,11 @@ class CharacterLibrary:
 
       self.GoUp()
 
-      self.poppy.m1.goal_position = -2
-      time.sleep(2)
+      self.poppy.m1.goal_position = 0
       self.poppy.m2.goal_position = 0
       self.poppy.m5.goal_position = -110
       self.poppy.m3.goal_position = 110
       time.sleep(2)
-      self.poppy.m1.goal_position = -4
       
       self.GoUp()
 
@@ -462,7 +460,6 @@ class CharacterLibrary:
       self.poppy.m1.goal_position = -3
       time.sleep(2)
 
-      self.poppy.m2.goal_position = 2
       self.poppy.m5.goal_position = -80
       self.poppy.m3.goal_position = 80
       time.sleep(2)
@@ -470,10 +467,7 @@ class CharacterLibrary:
       self.poppy.m1.goal_position = 3
       time.sleep(2)
 
-      self.poppy.m2.goal_position = 10
-      self.poppy.m5.goal_position = -60
-      self.poppy.m3.goal_position = 60
-      time.sleep(2)
+      self.GoUp()
 
       self.poppy.m1.goal_position = -3
       time.sleep(2)
