@@ -84,7 +84,7 @@ operaciones = {
 }
 
 time.sleep(5)
-abecedario = "klmnopqrst"
+abecedario = "mnoqs"
 
 for letra in abecedario:
     operaciones[letra]()
