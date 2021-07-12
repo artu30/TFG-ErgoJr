@@ -65,7 +65,7 @@ operaciones = {
 'h': CharacterManager.WriteH,
 'i': CharacterManager.WriteI, 
 'j': CharacterManager.WriteJ, 
-'k': CharacterManager.WriteQ, 
+'k': CharacterManager.WriteK, 
 'l': CharacterManager.WriteL,
 'm': CharacterManager.WriteM, 
 'n': CharacterManager.WriteN, 
@@ -84,7 +84,7 @@ operaciones = {
 }
 
 time.sleep(5)
-abecedario = "klmopqrst"
+abecedario = "klmnopqrst"
 
 for letra in abecedario:
     operaciones[letra]()
