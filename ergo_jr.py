@@ -84,14 +84,13 @@ operaciones = {
 }
 
 time.sleep(5)
-abecedario = "abcdefghij"
+abecedario = "klmopqrst"
 
 for letra in abecedario:
     operaciones[letra]()
     InitializeErgoJr(poppy)
     BackToRestPosture(poppy)
     time.sleep(2)
-
 
 """
 while True:
