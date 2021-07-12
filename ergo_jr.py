@@ -86,16 +86,6 @@ operaciones = {
 'z': CharacterManager.WriteZ
 }
 
-time.sleep(5)
-abecedario = "a"
-
-for letra in abecedario:
-    operaciones[letra]()
-    InitializeErgoJr(poppy)
-    BackToRestPosture(poppy)
-    time.sleep(2)
-
-"""
 while True:
     print ("Waiting for connection on RFCOMM channel %d", port)
 
@@ -125,4 +115,3 @@ while True:
         server_sock.close()
         print ("all done")
         break
-"""
