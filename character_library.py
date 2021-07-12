@@ -337,7 +337,7 @@ class CharacterLibrary:
       
       self.GoUp()
 
-      self.poppy.m1.goal_position = 2
+      self.poppy.m1.goal_position = 4
       self.poppy.m2.goal_position = 0
       self.poppy.m5.goal_position = -110
       self.poppy.m3.goal_position = 110
@@ -460,11 +460,11 @@ class CharacterLibrary:
       self.poppy.m1.goal_position = -1
       time.sleep(2)
 
-      self.poppy.m5.goal_position = -75
-      self.poppy.m3.goal_position = 75
+      self.poppy.m5.goal_position = -72
+      self.poppy.m3.goal_position = 72
       time.sleep(2)
 
-      self.poppy.m1.goal_position = 3
+      self.poppy.m1.goal_position = 4
       time.sleep(2)
 
       self.GoUp()
@@ -487,215 +487,101 @@ class CharacterLibrary:
       self.PencilUp()
 
    def WriteU(self):
-      self.poppy.m1.goal_position = 5
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -60
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 60
-      time.sleep(0.5)
-      self.poppy.m2.goal_position = 30
-      time.sleep(0.5)
+      self.LeftTopPos()
 
-      self.poppy.m2.moving_speed = 40
-      self.poppy.m3.moving_speed = 40
-      self.poppy.m5.moving_speed = 40
-      
-      self.poppy.m5.goal_position = -90
-      self.poppy.m3.goal_position = 90
-      self.poppy.m2.goal_position = 0
+      self.GoDown()
+
+      self.poppy.m1.goal_position = 3
       time.sleep(2)
 
-      self.poppy.m1.goal_position = 5
-      time.sleep(2)
+      self.GoUp()
 
-      self.poppy.m5.goal_position = -60
-      self.poppy.m3.goal_position = 60
-      self.poppy.m2.goal_position = 30
-      time.sleep(2)
+      self.PencilUp()
 
    def WriteV(self):
-      self.poppy.m1.goal_position = 5
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -60
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 60
-      time.sleep(0.5)
-      self.poppy.m2.goal_position = 30
-      time.sleep(0.5)
-
-      self.poppy.m1.moving_speed = 40
-      self.poppy.m2.moving_speed = 40
-      self.poppy.m3.moving_speed = 40
-      self.poppy.m5.moving_speed = 40
+      self.LeftTopPos()
 
       self.poppy.m1.goal_position = 0
-      self.poppy.m5.goal_position = -90
-      self.poppy.m3.goal_position = 90
       self.poppy.m2.goal_position = 0
+      self.poppy.m5.goal_position = -110
+      self.poppy.m3.goal_position = 110
       time.sleep(2)
 
-      self.poppy.m1.goal_position = -5
-      self.poppy.m5.goal_position = -60
-      self.poppy.m3.goal_position = 60
-      self.poppy.m2.goal_position = 30
-      time.sleep(2)
+      self.RightTopPos()
+
+      self.PencilUp()
 
    def WriteW(self):
-      self.poppy.m1.goal_position = 10
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -60
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 60
-      time.sleep(0.5)
-      self.poppy.m2.goal_position = 30
-      time.sleep(0.5)
+      self.LeftTopPos()
 
-      self.poppy.m1.moving_speed = 40
-      self.poppy.m2.moving_speed = 40
-      self.poppy.m3.moving_speed = 40
-      self.poppy.m5.moving_speed = 40
-
-      self.poppy.m1.goal_position = 5
-      self.poppy.m5.goal_position = -90
-      self.poppy.m3.goal_position = 90
-      self.poppy.m2.goal_position = 0
-      time.sleep(2)
+      self.GoDown()
 
       self.poppy.m1.goal_position = 0
-      self.poppy.m5.goal_position = -75
-      self.poppy.m3.goal_position = 75
-      self.poppy.m2.goal_position = 15
-      time.sleep(2)
-
-      self.poppy.m1.goal_position = -5
-      self.poppy.m5.goal_position = -90
-      self.poppy.m3.goal_position = 90
-      self.poppy.m2.goal_position = 0
-      time.sleep(2)
-      
-      self.poppy.m1.goal_position = -10
+      self.poppy.m2.goal_position = 10
       self.poppy.m5.goal_position = -60
       self.poppy.m3.goal_position = 60
-      self.poppy.m2.goal_position = 30
       time.sleep(2)
+      
+      self.GoDown()
+
+      self.poppy.m1.goal_position = 4
+      self.poppy.m2.goal_position = 10
+      self.poppy.m5.goal_position = -60
+      self.poppy.m3.goal_position = 60
+
+      self.PencilUp()
 
    def WriteX(self):
-      self.poppy.m1.goal_position = 5
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -90
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 90
-      time.sleep(0.5)
+      self.LeftInitPos()
 
-      self.poppy.m1.moving_speed = 40
-      self.poppy.m2.moving_speed = 40
-      self.poppy.m3.moving_speed = 40
-      self.poppy.m5.moving_speed = 40
-
-      self.poppy.m1.goal_position = -5
+      self.poppy.m1.goal_position = -2
+      self.poppy.m2.goal_position = 10
       self.poppy.m5.goal_position = -60
       self.poppy.m3.goal_position = 60
-      self.poppy.m2.goal_position = 30
       time.sleep(2)
 
-      self.poppy.m3.goal_position = 0
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = 0
-      time.sleep(0.5)
-      self.poppy.m1.goal_position = 0
-      time.sleep(0.5)
-      self.poppy.m2.goal_position = 0
-      time.sleep(0.5)
+      self.PencilUp()
 
-      self.poppy.m2.moving_speed = 100
-      self.poppy.m3.moving_speed = 100
-      self.poppy.m5.moving_speed = 100
-      
-      self.poppy.m1.goal_position = -5
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -90
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 90
-      time.sleep(0.5)
+      self.RightInitPos()
 
-      self.poppy.m1.moving_speed = 40
-      self.poppy.m2.moving_speed = 40
-      self.poppy.m3.moving_speed = 40
-      self.poppy.m5.moving_speed = 40
-
-      self.poppy.m1.goal_position = 5
+      self.poppy.m1.goal_position = 2
+      self.poppy.m2.goal_position = 10
       self.poppy.m5.goal_position = -60
       self.poppy.m3.goal_position = 60
-      self.poppy.m2.goal_position = 30
       time.sleep(2)
+
+      self.PencilUp()
 
    def WriteY(self):
-      self.poppy.m1.goal_position = 0
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -90
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 90
-      time.sleep(0.5)
-
-      self.poppy.m2.moving_speed = 40
-      self.poppy.m3.moving_speed = 40
-      self.poppy.m5.moving_speed = 40
-
-      self.poppy.m5.goal_position = -75
-      self.poppy.m3.goal_position = 75
-      self.poppy.m2.goal_position = 15
-      time.sleep(2)
-
-      self.poppy.m1.moving_speed = 40
-      self.poppy.m2.moving_speed = 40
-      self.poppy.m3.moving_speed = 40
-      self.poppy.m5.moving_speed = 40
-
-      self.poppy.m1.goal_position = 5
-      self.poppy.m5.goal_position = -60
-      self.poppy.m3.goal_position = 60
-      self.poppy.m2.goal_position = 30
-      time.sleep(2)
+      self.LeftTopPos()
 
       self.poppy.m1.goal_position = 0
+      self.poppy.m2.goal_position = 0
       self.poppy.m5.goal_position = -75
       self.poppy.m3.goal_position = 75
-      self.poppy.m2.goal_position = 15
       time.sleep(2)
 
-      self.poppy.m1.goal_position = -5
-      self.poppy.m5.goal_position = -60
-      self.poppy.m3.goal_position = 60
-      self.poppy.m2.goal_position = 30
-      time.sleep(2)
+      self.RightTopPos()
+
+      self.PencilUp()
+
+      self.CenterUpPos()
+
+      self.GoDown()
+
+      self.PencilUp()
 
    def WriteZ(self):
-      self.poppy.m1.goal_position = -5
-      time.sleep(0.5)
-      self.poppy.m5.goal_position = -90
-      time.sleep(0.5)
-      self.poppy.m3.goal_position = 90
-      time.sleep(0.5)
+      self.RightTopPos()
 
-      self.poppy.m2.moving_speed = 40
-      self.poppy.m3.moving_speed = 40
-      self.poppy.m5.moving_speed = 40
+      self.poppy.m1.goal_position = 2
 
-      self.poppy.m1.goal_position = 5
-      time.sleep(2)
-
-      self.poppy.m1.moving_speed = 40
-      self.poppy.m2.moving_speed = 40
-      self.poppy.m3.moving_speed = 40
-      self.poppy.m5.moving_speed = 40
-
-      self.poppy.m1.goal_position = -5
+      self.poppy.m1.goal_position = -3
+      self.poppy.m2.goal_position = 10
       self.poppy.m5.goal_position = -60
       self.poppy.m3.goal_position = 60
-      self.poppy.m2.goal_position = 30
       time.sleep(2)
 
-      self.poppy.m1.moving_speed = 100
+      self.poppy.m1.goal_position = 4
 
-      self.poppy.m1.goal_position = 5
-      time.sleep(2)
+      self.PencilUp()
