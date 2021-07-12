@@ -84,7 +84,7 @@ operaciones = {
 }
 
 time.sleep(5)
-abecedario = "urjc"
+abecedario = "a"
 
 for letra in abecedario:
     operaciones[letra]()
